@@ -88,18 +88,26 @@ public:
         vector<string> vec = { "foo", "bar" };
         vector<int> res = { 9, 0 };
         std::cout << "Test 1 " << std::string(findSubstring("barfoothefoobarman", vec) == res ? "passed" : "FAILED") << "\n";
+
         vec = { "word","good","best","word" };
         res = {};
         std::cout << "Test 2 " << std::string(findSubstring("wordgoodgoodgoodbestword", vec) == res ? "passed" : "FAILED") << "\n";
+
         vec = { "the", "foo", "bar" };
         res = { 6, 0 };
         std::cout << "Test 3 " << std::string(findSubstring("barfoothefoobarman", vec) == res ? "passed" : "FAILED") << "\n";
+
         vec = { "word","good","best","good" };
         res = { 8 };
         std::cout << "Test 4 " << std::string(findSubstring("wordgoodgoodgoodbestword", vec) == res ? "passed" : "FAILED") << "\n";
+
         vec = { "foo","bar" };
-        res = { 0, 9 };
+        res = { 9, 0 };
         std::cout << "Test 5 " << std::string(findSubstring("barfoothefoobarman", vec) == res ? "passed" : "FAILED") << "\n";
+
+        vec = { "cac", "aaa", "aba", "aab", "abc" };
+        res = { 97 };
+        std::cout << "Test 6 " << std::string(findSubstring("abbaccaaabcabbbccbabbccabbacabcacbbaabbbbbaaabaccaacbccabcbababbbabccabacbbcabbaacaccccbaabcabaabaaaabcaabcacabaa", vec) == res ? "passed" : "FAILED") << "\n";
         std::cout << "Completed\n";
     }
 };
