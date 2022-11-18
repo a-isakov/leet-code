@@ -80,5 +80,8 @@
     <ClInclude Include="141 Linked List Cycle.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="223 Rectangle Area.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
