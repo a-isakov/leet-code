@@ -83,5 +83,14 @@
     <ClInclude Include="223 Rectangle Area.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="58. Length of Last Word.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="66. Plus One.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="67. Add Binary.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

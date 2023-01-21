@@ -24,6 +24,10 @@
 //    - 104 <= ay1 <= ay2 <= 104
 //    - 104 <= bx1 <= bx2 <= 104
 //    - 104 <= by1 <= by2 <= 104
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 class Solution {
 public:

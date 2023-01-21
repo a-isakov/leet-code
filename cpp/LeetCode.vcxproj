@@ -174,6 +174,9 @@
     <ClInclude Include="31 Next Permutation.hpp" />
     <ClInclude Include="35 Search Insert Position.hpp" />
     <ClInclude Include="53 Maximum Subarray.hpp" />
+    <ClInclude Include="58. Length of Last Word.hpp" />
+    <ClInclude Include="66. Plus One.hpp" />
+    <ClInclude Include="67. Add Binary.hpp" />
     <ClInclude Include="69 Sqrt(x).hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
