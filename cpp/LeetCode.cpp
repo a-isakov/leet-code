@@ -1,5 +1,5 @@
 #include <iostream>
-#include "67. Add Binary.hpp"
+#include "70. Climbing Stairs.hpp"
 
 int main()
 {

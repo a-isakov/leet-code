@@ -92,5 +92,8 @@
     <ClInclude Include="67. Add Binary.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="70. Climbing Stairs.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

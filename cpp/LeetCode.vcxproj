@@ -178,6 +178,7 @@
     <ClInclude Include="66. Plus One.hpp" />
     <ClInclude Include="67. Add Binary.hpp" />
     <ClInclude Include="69 Sqrt(x).hpp" />
+    <ClInclude Include="70. Climbing Stairs.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
