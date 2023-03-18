@@ -11,45 +11,39 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 #include <vector>
 #include <queue>
+#include <string>
+#include <iostream>
 
 using namespace std;
 
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        if (nums.empty())
+        if (nums.empty() || nums.size() == 1)
             return;
-        //priority_queue<int, std::vector<int>, std::greater<int>> pq; // по возрастанию. top получит меньший
-        priority_queue<int, std::vector<int>, std::less<int>> pq; // по убыванию. top получит больший
-        size_t index = 0;
-        bool action = false;
-        for (size_t i = 0; i < nums.size() - 1; i++)
-        {
-            size_t l = nums.size() - i - 2;
-            size_t r = nums.size() - i - 1;
-            pq.push(nums[r]);
-            if (nums[l] < nums[r])
-            {
-                action = true;
-                index = l;
+        int pos = -1;
+        for (int i = (int)nums.size() - 2; i >= 0; --i) {
+            if (nums[i + 1] > nums[i]) {
+                pos = i + 1;
+                std::sort(nums.begin() + pos, nums.end());
+                // find index of the next bigger to [i]
+                int swap_pos = -1;
+                for (size_t j = i + 1; j < nums.size(); ++j) {
+                    if (nums[j] > nums[i]) {
+                        swap_pos = (int)j;
+                        break;
+                    }
+                }
+                // swap next bigger found and sort the rest of array
+                int swap = nums[i];
+                nums[i] = nums[swap_pos];
+                nums[swap_pos] = swap;
+                std::sort(nums.begin() + pos, nums.end());
                 break;
             }
         }
-        if (!action)
-            pq.push(nums[0]);
-        else
-        {
-            int tmp = nums[index];
-            nums[index++] = pq.top();
-            pq.pop();
-            pq.push(tmp);
-        }
-        for (size_t i = 0; i < nums.size() - index; i++)
-        {
-            //nums[i + index] = pq.top();
-            nums[nums.size() - i - 1] = pq.top();
-            pq.pop();
-        }
+        if (pos == -1)
+            std::sort(nums.begin(), nums.end());
     }
 
     void test()
@@ -85,5 +79,9 @@ public:
         in = { 2, 3, 1 };
         nextPermutation(in);
         cout << "Test 8 " << string(in == vector<int>({ 3, 1, 2 }) ? "passed" : "FAILED") << "\n";
+
+        in = { 2, 4, 3, 1, 0 };
+        nextPermutation(in);
+        cout << "Test 9 " << string(in == vector<int>({ 3, 0, 1, 2, 4 }) ? "passed" : "FAILED") << "\n";
     }
 };
